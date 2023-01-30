@@ -28,7 +28,7 @@ function onFormSubmit(e) {
 function populateData() {
   const parsedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
   if (parsedData) {
-    email.value = parsedData.email;
-    textarea.value = parsedData.textarea;
+    email.value = parsedData.email || '';
+    textarea.value = parsedData.textarea || '';
   }
 }
